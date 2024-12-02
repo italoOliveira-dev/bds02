@@ -24,13 +24,15 @@ public class City {
 	
 	@OneToMany(mappedBy = "city")
 	private List<Event> events = new ArrayList<>();
-	
-	public City() {
+
+	public City() {}
+
+	public City(String name) {
+		this.name = name;
 	}
 
 	public City(Long id, String name) {
 		this.id = id;
 		this.name = name;
 	}
-
 }

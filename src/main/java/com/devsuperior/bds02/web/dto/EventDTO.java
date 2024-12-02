@@ -1,4 +1,4 @@
-package com.devsuperior.bds02.dto;
+package com.devsuperior.bds02.web.dto;
 
 import java.time.LocalDate;
 

@@ -8,8 +8,6 @@ import lombok.ToString;
 
 import java.time.LocalDate;
 
-
-
 @Entity
 @Table(name = "tb_event")
 @Getter

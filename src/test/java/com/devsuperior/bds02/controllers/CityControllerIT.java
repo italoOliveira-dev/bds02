@@ -16,7 +16,7 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devsuperior.bds02.dto.CityDTO;
+import com.devsuperior.bds02.web.dto.CityDTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest
