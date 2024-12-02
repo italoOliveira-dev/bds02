@@ -6,6 +6,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import com.devsuperior.bds02.web.dto.CityCreateOrUpdateDTO;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -46,8 +47,8 @@ public class CityControllerIT {
 	@Test
 	public void insertShouldInsertResource() throws Exception {
 
-		CityDTO dto = new CityDTO(null, "Recife");
-		String jsonBody = objectMapper.writeValueAsString(dto);
+		CityCreateOrUpdateDTO createDTO = new CityCreateOrUpdateDTO("Recife");
+		String jsonBody = objectMapper.writeValueAsString(createDTO);
 		
 		ResultActions result =
 				mockMvc.perform(post("/cities")
