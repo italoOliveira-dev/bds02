@@ -26,8 +26,14 @@ public class Event {
 	@ManyToOne
 	@JoinColumn(name = "city_id")
 	private City city;
-	
-	public Event() {
+
+	public Event() {}
+
+	public Event(String name, LocalDate date, String url, City city) {
+		this.name = name;
+		this.date = date;
+		this.url = url;
+		this.city = city;
 	}
 
 	public Event(Long id, String name, LocalDate date, String url, City city) {
